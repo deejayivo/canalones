@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Tejados y Canalones Hidalgo</title>
+  <desc id="desc">Logotipo con tejado, ventana y ondas en tonos verdes</desc>
+  <rect width="760" height="430" fill="#ffffff"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M188 158 318 38 448 158" stroke="#70b1b2" stroke-width="25"/>
+    <path d="M105 164c69 83 161 86 286 59 122-26 229-35 335 45-156-49-258-18-374 5-107 21-207 3-247-109Z" fill="#285f5f" stroke="none"/>
+    <path d="M160 278c105 42 206 24 313 4 93-17 166-17 242 16-125-2-217 38-325 45-88 6-167-13-230-65Z" fill="#70b1b2" stroke="none"/>
+  </g>
+  <g fill="#70b1b2">
+    <rect x="290" y="120" width="37" height="37" rx="7"/>
+    <rect x="337" y="120" width="37" height="37" rx="7"/>
+    <rect x="290" y="167" width="37" height="37" rx="7"/>
+    <rect x="337" y="167" width="37" height="37" rx="7"/>
+  </g>
+  <text x="380" y="352" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="61" font-weight="700" fill="#70a9aa">Tejados y Canalones</text>
+  <text x="380" y="420" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="800" letter-spacing="10" fill="#285f5f">HIDALGO</text>
+</svg>
