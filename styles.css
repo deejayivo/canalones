@@ -455,41 +455,6 @@ a {
   max-width: 780px;
 }
 
-.location-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
-  gap: clamp(28px, 6vw, 80px);
-  align-items: start;
-  background: var(--brand);
-  color: var(--white);
-}
-
-.location-section .eyebrow {
-  color: #f1b36a;
-}
-
-.location-copy p {
-  max-width: 650px;
-  color: rgba(255, 255, 255, 0.78);
-}
-
-.area-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.area-list li {
-  padding: 15px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  font-weight: 800;
-}
-
 .contact-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
@@ -624,7 +589,6 @@ a {
   .service-row.reverse,
   .split,
   .problem-section,
-  .location-section,
   .contact-section {
     grid-template-columns: 1fr;
   }
@@ -648,7 +612,7 @@ a {
   .service-grid,
   .work-grid,
   .check-list,
-  .area-list {
+  .check-list {
     grid-template-columns: 1fr;
   }
 
