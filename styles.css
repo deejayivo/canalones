@@ -21,7 +21,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--white);
+  background: var(--surface);
   font-family: Inter, Arial, Helvetica, sans-serif;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -95,9 +95,15 @@ a {
   border: 1px solid var(--line);
 }
 
+.button:hover,
+.text-link:hover {
+  transform: translateY(-1px);
+}
+
 .hero {
   position: relative;
   display: grid;
+  place-items: center;
   min-height: 660px;
   isolation: isolate;
   overflow: hidden;
@@ -115,10 +121,10 @@ a {
 
 .hero-content {
   width: min(760px, calc(100% - 36px));
-  align-self: center;
-  margin-left: clamp(18px, 7vw, 104px);
+  margin: 0 auto;
   padding: 88px 0 132px;
   color: var(--white);
+  text-align: center;
 }
 
 .eyebrow {
@@ -138,12 +144,13 @@ a {
 
 .hero h1 {
   max-width: 720px;
+  margin: 0 auto;
   font-size: clamp(3rem, 7vw, 6.7rem);
 }
 
 .hero p:not(.eyebrow) {
   max-width: 620px;
-  margin: 22px 0 0;
+  margin: 22px auto 0;
   color: rgba(255, 255, 255, 0.88);
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   text-wrap: pretty;
@@ -153,6 +160,7 @@ a {
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   margin-top: 34px;
 }
@@ -177,27 +185,25 @@ a {
 }
 
 .section {
-  padding: clamp(64px, 9vw, 112px) clamp(18px, 5vw, 74px);
+  padding: clamp(58px, 8vw, 96px) clamp(18px, 5vw, 74px);
 }
 
 .section-heading {
-  display: grid;
-  grid-template-columns: minmax(160px, 0.4fr) minmax(0, 1fr);
-  gap: 30px;
-  align-items: end;
-  max-width: 1160px;
-  margin: 0 auto 34px;
+  max-width: 860px;
+  margin: 0 auto clamp(28px, 4vw, 44px);
+  text-align: center;
 }
 
 .section h2 {
   max-width: 820px;
+  margin-inline: auto;
   font-size: clamp(2rem, 4.2vw, 4.4rem);
   text-wrap: balance;
 }
 
 .section-heading p:not(.eyebrow) {
   max-width: 680px;
-  margin: 18px 0 0;
+  margin: 18px auto 0;
   color: var(--muted);
   font-size: clamp(1rem, 1.4vw, 1.16rem);
 }
@@ -208,28 +214,29 @@ a {
 
 .service-stack {
   display: grid;
-  gap: clamp(26px, 5vw, 58px);
-  max-width: 1160px;
+  gap: 22px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
 .service-row {
   display: grid;
-  grid-template-columns: minmax(280px, 0.84fr) minmax(0, 1fr);
-  gap: clamp(24px, 5vw, 70px);
+  grid-template-columns: minmax(260px, 0.88fr) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 46px);
   align-items: center;
-  padding: clamp(18px, 3vw, 28px);
+  padding: clamp(16px, 2.5vw, 24px);
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--surface);
+  background: var(--white);
+  box-shadow: 0 14px 34px rgba(23, 50, 51, 0.08);
 }
 
 .service-row.reverse {
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.84fr);
+  grid-template-columns: minmax(260px, 0.88fr) minmax(0, 1fr);
 }
 
 .service-row.reverse figure {
-  order: 2;
+  order: 0;
 }
 
 .service-row figure {
@@ -239,6 +246,7 @@ a {
   overflow: hidden;
   border-radius: 7px;
   background: #d8e3e1;
+  box-shadow: inset 0 0 0 1px rgba(23, 50, 51, 0.08);
 }
 
 .service-row img {
@@ -260,6 +268,8 @@ a {
 
 .service-copy {
   max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .service-copy span {
@@ -273,8 +283,8 @@ a {
 
 .service-copy h3 {
   margin: 0;
-  font-size: clamp(1.8rem, 3vw, 3.35rem);
-  line-height: 1.04;
+  font-size: clamp(1.7rem, 2.7vw, 2.8rem);
+  line-height: 1.08;
   text-wrap: balance;
 }
 
@@ -286,10 +296,17 @@ a {
 
 .text-link {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 24px;
-  color: var(--brand);
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 6px;
+  color: var(--white);
+  background: var(--brand);
   font-weight: 900;
-  border-bottom: 2px solid currentColor;
+  border-bottom: 0;
+  transition: transform 180ms ease;
 }
 
 .service-grid,
@@ -325,7 +342,7 @@ a {
 }
 
 .work-section {
-  background: var(--surface);
+  background: var(--white);
 }
 
 .problem-section {
@@ -364,6 +381,7 @@ a {
 .work-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
+  max-width: 1080px;
 }
 
 .work-card {
@@ -373,7 +391,7 @@ a {
   overflow: hidden;
   border-radius: 8px;
   background: var(--ink);
-  box-shadow: var(--shadow);
+  box-shadow: 0 14px 34px rgba(23, 50, 51, 0.12);
 }
 
 .work-card.featured {
@@ -441,10 +459,12 @@ a {
 
 .split {
   display: grid;
-  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr);
-  gap: clamp(28px, 6vw, 84px);
-  max-width: 1160px;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 62px);
+  max-width: 1080px;
   margin: 0 auto;
+  align-items: center;
+  padding-block: clamp(48px, 7vw, 82px);
 }
 
 .copy {
@@ -456,8 +476,9 @@ a {
 }
 
 .contact-section {
-  max-width: 1160px;
+  max-width: 760px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .contact-panel,
@@ -466,7 +487,12 @@ a {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--white);
-  box-shadow: var(--shadow);
+  box-shadow: 0 14px 34px rgba(23, 50, 51, 0.1);
+}
+
+.contact-panel p {
+  max-width: 620px;
+  margin-inline: auto;
 }
 
 .seo-notes ul {
@@ -531,9 +557,7 @@ a {
   }
 
   .trust-strip,
-  .service-grid,
-  .service-row,
-  .service-row.reverse {
+  .service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -546,7 +570,6 @@ a {
     min-height: 390px;
   }
 
-  .section-heading,
   .service-row,
   .service-row.reverse,
   .split,
@@ -573,7 +596,6 @@ a {
   .trust-strip,
   .service-grid,
   .work-grid,
-  .check-list,
   .check-list {
     grid-template-columns: 1fr;
   }
@@ -581,6 +603,7 @@ a {
   .service-row,
   .service-row.reverse {
     grid-template-columns: 1fr;
+    padding: 14px;
   }
 
   .service-row.reverse figure {
@@ -592,7 +615,7 @@ a {
   }
 
   .service-copy h3 {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
 
   .work-card,
