@@ -244,32 +244,6 @@
             <a class="button secondary" href="https://wa.me/34699707343">Escribir por WhatsApp</a>
           </div>
         </div>
-        <form class="contact-form" id="contactForm">
-          <label>
-            Nombre
-            <input name="name" type="text" placeholder="Tu nombre">
-          </label>
-          <label>
-            Teléfono
-            <input name="phone" type="tel" placeholder="Tu teléfono">
-          </label>
-          <label>
-            ¿Qué necesitas?
-            <select name="service">
-              <option>Canalones o bajantes</option>
-              <option>Impermeabilización</option>
-              <option>Reparación de tejado</option>
-              <option>Ventana Velux o chimenea</option>
-              <option>Terraza</option>
-              <option>Otro trabajo</option>
-            </select>
-          </label>
-          <label>
-            Mensaje
-            <textarea name="message" rows="4" placeholder="Ej: Tengo una gotera en una ventana de tejado..."></textarea>
-          </label>
-          <button class="button primary" type="submit">Enviar consulta por email</button>
-        </form>
       </section>
     </main>
 
@@ -278,20 +252,5 @@
       <p>Tejados y Canalones Hidalgo</p>
       <a href="tel:+34699707343">Llamar ahora: 699 707 343</a>
     </footer>
-    <script>
-      document.getElementById("contactForm").addEventListener("submit", function (event) {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        const message = [
-          "Hola, quiero pedir presupuesto.",
-          data.get("name") ? "Nombre: " + data.get("name") : "",
-          data.get("phone") ? "Telefono: " + data.get("phone") : "",
-          "Servicio: " + data.get("service"),
-          data.get("message") ? "Mensaje: " + data.get("message") : ""
-        ].filter(Boolean).join("\n");
-        const subject = encodeURIComponent("Consulta desde la web");
-        window.location.href = "mailto:info@tejadosycanaloneshidalgo.es?subject=" + subject + "&body=" + encodeURIComponent(message);
-      });
-    </script>
   </body>
 </html>
