@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tejadosycanaloneshidalgo.es/sitemap.xml
+Sitemap: https://deejayivo.github.io/canalones/sitemap.xml
